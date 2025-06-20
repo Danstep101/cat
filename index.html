@@ -20,6 +20,7 @@
       flex-direction: column;
     }
 
+    /* Мобильные стили (по умолчанию) */
     header {
       background-color: #111;
       padding: 12px 15px;
@@ -45,6 +46,7 @@
       width: 100%;
       text-align: center;
       order: 1;
+      font-size: 20px;
     }
 
     @keyframes pulse {
@@ -279,7 +281,7 @@
       animation: fadeIn 1s ease-out 1.2s both;
     }
 
-    /* Адаптация для планшетов */
+    /* Планшеты (600px и выше) */
     @media (min-width: 600px) {
       .left-box {
         min-height: 400px;
@@ -287,26 +289,35 @@
       }
       
       .left-box h1 {
-        font-size: 36px;
+        font-size: 42px;
       }
       
       .code404 {
-        font-size: 150px;
+        font-size: 180px;
+      }
+      
+      .left-box p {
+        font-size: 18px;
       }
       
       .image-caption {
         font-size: 28px;
         bottom: 20px;
       }
+      
+      .left-box button {
+        font-size: 18px;
+      }
     }
 
-    /* Адаптация для десктопов */
+    /* Десктопы (900px и выше) */
     @media (min-width: 900px) {
       header {
         padding: 15px 40px;
         flex-wrap: nowrap;
         justify-content: center;
         gap: 30px;
+        font-size: 18px;
       }
 
       .logo {
@@ -314,6 +325,7 @@
         position: absolute;
         left: 40px;
         text-align: left;
+        font-size: 24px;
       }
 
       nav {
@@ -323,9 +335,15 @@
         gap: 30px;
       }
 
+      nav a {
+        font-size: 18px;
+        padding: 0;
+      }
+
       .phone {
         position: absolute;
         right: 40px;
+        font-size: 18px;
       }
 
       .content {
@@ -354,10 +372,17 @@
 
       .left-box h1 {
         font-size: 62px;
+        margin-bottom: 20px;
       }
 
       .code404 {
         font-size: 280px;
+      }
+
+      .left-box p {
+        font-size: 20px;
+        margin-bottom: 40px;
+        max-width: 80%;
       }
 
       .left-box button {
@@ -365,11 +390,17 @@
         font-size: 22px;
         width: auto;
         margin: 0;
+        max-width: none;
       }
 
       .image-caption {
         font-size: 32px;
         bottom: 30px;
+      }
+      
+      footer {
+        font-size: 14px;
+        padding: 15px;
       }
     }
   </style>
